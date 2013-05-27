@@ -87,14 +87,20 @@ class FileOperations:
 
     def EditFile(self, filePath):
         print("****************\n    Edito Your Alias File \n***************\n")
-        option = raw_input("select your editor (1. gedit, 2. vim, 3.emacs 4. other ... enter to skip) ? ")
+        try:
+            option = raw_input("select your editor (1. gedit, 2. vim, 3.emacs 4. other ... enter to skip) ? ")
+        except:
+            option = input("select your editor (1. gedit, 2. vim, 3.emacs 4. other ... enter to skip) ? ")
         editor = ""
         if option is "":
             editor = "cat"
         elif int(option) < 4:
             editor = self.editors[int(option)-1]
         else:
-            editor = str(raw_input("enter your editor: "))
+            try:
+                editor = str(raw_input("enter your editor: "))
+            except:
+                editor = str(input("enter your editor: "))
 
         command = editor + " " +filePath
         return os.system(command)
