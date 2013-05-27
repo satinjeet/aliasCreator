@@ -40,7 +40,7 @@ class Application:
             print("Found Application..")
         else:
             print("Creating Dir....")
-            os.makedir(self.appDir)
+            os.makedirs(self.appDir)
         return self           
 
     def __findAndCreateJSON(self):
