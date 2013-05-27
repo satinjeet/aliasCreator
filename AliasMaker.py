@@ -86,6 +86,7 @@ class FileOperations:
     editors = ["gedit", "vi", "emacs"]
 
     def EditFile(self, filePath):
+        print("****************\n    Edito Your Alias File \n***************\n")
         option = raw_input("select your editor (1. gedit, 2. vim, 3.emacs 4. other ... enter to skip) ? ")
         editor = ""
         if option is "":
@@ -114,4 +115,3 @@ class FileOperations:
 
 app = Application()
 app.__boot__()
-    
