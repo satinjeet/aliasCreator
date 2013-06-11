@@ -18,7 +18,7 @@ then
 2. python3 (default)"
     read PYTHON_VERSION
 
-    if [ "$PYTHON_VERSION" ~eq "1" ]
+    if [ "$PYTHON_VERSION" -eq "1" ]
     then
       echo "
 #!/bin/sh
