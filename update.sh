@@ -5,5 +5,5 @@ base64 "$fileName" > hash.hash
 git commit -a
 
 echo "your branch is: "
-read $BRANCHNAME
-git push origin "$BRANCHNAME"
+read BRANCHNAME
+git push origin $BRANCHNAME
