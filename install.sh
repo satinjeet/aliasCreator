@@ -15,7 +15,7 @@ then
     base64 -d ~/.aliasmaker/hash > ~/.aliasmaker/code.py
     echo "
 #!/bin/sh
-python3 ~/.aliasmaker/code.py" > ~/.aliasmaker/execute
+pytho3n ~/.aliasmaker/code.py" > ~/.aliasmaker/execute
     chmod a+x ~/.aliasmaker/execute
 
     sudo rm /usr/bin/createalias || echo "checking for previous links.."
